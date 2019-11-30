@@ -1,0 +1,80 @@
+{
+  "name": "wanna-find-me",
+  "version": "1.0.0",
+  "description": "This package.json holds the dependencies of all the backend services of wanna-find-me",
+  "main": "server.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^4.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "express-form-data": "^2.0.8",
+    "express-list-endpoints": "^4.0.1",
+    "install": "^0.13.0",
+    "joi": "^14.3.1",
+    "jsonfile": "^5.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "node-pre-gyp": "^0.14.0",
+    "pg": "^7.11.0",
+    "pg-hstore": "^2.3.3",
+    "randexp": "^0.5.3",
+    "sequelize": "^5.10.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.1",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-node": "^4.0.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server",
+    "start:dev": "node server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "npm install && npm run build"
+  },
+  "keywords": [
+    "findme"
+  ],
+  "author": "Ahmed Elzamarany",
+  "license": "ISC",
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": "airbnb-base",
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "rules": {
+    "nonblock-statement-body-position": "off",
+    "linebreak-style": "off",
+    "curly": "off",
+    "object-curly-newline": "off",
+    "operator-linebreak": "off",
+    "no-underscore-dangle": "off",
+    "comma-dangle": "off",
+    "semi": "off",
+    "camelcase": "off",
+    "arrow-parens": "off",
+    "implicit-arrow-linebreak": "off",
+    "function-paren-newline": "off",
+    "no-param-reassign": "off",
+    "brace-style": "off"
+  }
+}
